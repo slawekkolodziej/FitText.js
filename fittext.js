@@ -5,7 +5,6 @@
 * Released under the WTFPL license 
 * http://sam.zoy.org/wtfpl/
 * Modified by Slawomir Kolodziej http://slawekk.info
-* @todo: add IE support
 *
 * Date: Tue Aug 09 2011 10:45:54 GMT+0200 (CEST)
 */
