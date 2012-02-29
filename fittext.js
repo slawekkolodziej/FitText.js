@@ -22,12 +22,16 @@
 
   window.fitText = function (el, kompressor) {
 
+    var settings = {
+      'minFontSize' : Number.NEGATIVE_INFINITY,
+      'maxFontSize' : Number.POSITIVE_INFINITY
+    };
+
     var fit = function (el) {
-      var origFontSize = parseFloat( css(el, 'font-size') ),
-          compressor = kompressor || 1;
+      var compressor = kompressor || 1;
 
       var resizer = function () {
-        el.style.fontSize = Math.min(el.clientWidth / (compressor * 10), origFontSize) + 'px';
+        el.style.fontSize = Math.max(Math.min(el.clientWidth / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)) + 'px';
       };
 
       // Call once to set.
