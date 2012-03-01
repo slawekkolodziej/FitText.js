@@ -23,8 +23,8 @@
   window.fitText = function (el, kompressor) {
 
     var settings = {
-      'minFontSize' : Number.NEGATIVE_INFINITY,
-      'maxFontSize' : Number.POSITIVE_INFINITY
+      'minFontSize' : -1/0,
+      'maxFontSize' : 1/0
     };
 
     var fit = function (el) {
